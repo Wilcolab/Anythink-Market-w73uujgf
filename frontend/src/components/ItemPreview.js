@@ -35,21 +35,12 @@ const ItemPreview = (props) => {
       style={{ borderRadius: "20px" }}
       id={`item_${item.slug}`}
     >
-      {item.image ? (
-        <img
-          src={item.image}
-          alt="item"
-          className="card-img-top item-img"
-          style={{ borderRadius: "20px" }}
-        />
-      ) : (
-        <img
-          src="https://raw.githubusercontent.com/ObelusFamily/Anythink-Market-w73uujgf/main/frontend/public/placeholder.png"
-          alt="item"
-          className="card-img-top item-img"
-          style={{ borderRadius: "20px" }}
-        />
-      )}
+      <img
+        alt="item"
+        src={item.image}
+        className="card-img-top item-img"
+        style={{ borderRadius: "20px" }}
+      />
       <div className="card-body">
         <Link to={`/item/${item.slug}`} className="text-white">
           <h3 className="card-title">{item.title}</h3>

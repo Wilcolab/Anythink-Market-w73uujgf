@@ -37,20 +37,12 @@ const LoggedInView = (props) => {
 
       <li className="nav-item">
         <Link to={`/@${props.currentUser.username}`} className="nav-link">
-          {props.currentUser.image ? (
-            <img
-              src={props.currentUser.image}
-              className="user-pic pr-1"
-              alt={props.currentUser.username}
-            />
-          ) : (
-            <img
-              src="https://raw.githubusercontent.com/ObelusFamily/Anythink-Market-w73uujgf/main/frontend/public/placeholder.png"
-              className="user-pic pr-1"
-              alt={props.currentUser.username}
-            />
-            )}
-            {props.currentUser.username}
+          <img
+            src={props.currentUser.image}
+            className="user-pic pr-1"
+            alt={props.currentUser.username}
+          />
+          {props.currentUser.username}
         </Link>
       </li>
     </ul>
