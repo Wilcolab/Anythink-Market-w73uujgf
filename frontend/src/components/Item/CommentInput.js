@@ -42,11 +42,19 @@ class CommentInput extends React.Component {
           ></textarea>
         </div>
         <div className="card-footer">
-          <img
+          {this.props.currentUser.image ? (
+            <img
             src={this.props.currentUser.image}
             className="user-pic mr-2"
             alt={this.props.currentUser.username}
-          />
+            />
+          ) : (
+            <img
+              src="https://raw.githubusercontent.com/ObelusFamily/Anythink-Market-w73uujgf/main/frontend/public/placeholder.png"
+              className="user-pic mr-2"
+              alt={this.props.currentUser.username}
+            />
+            )}
           <button className="btn btn-sm btn-primary" type="submit">
             Post Comment
           </button>

@@ -7,12 +7,21 @@ const ItemMeta = (props) => {
   return (
     <div id="item-meta" className="d-flex flex-row align-items-center pt-2">
       <Link to={`/@${item.seller.username}`}>
-        <img
-          id="seller-image"
-          src={item.seller.image}
-          alt={item.seller.username}
-          className="user-pic mr-2"
-        />
+        {item.seller.image != null ? (
+          <img
+            id="seller-image"
+            src={item.seller.image}
+            alt={item.seller.username}
+            className="user-pic mr-2"
+          />
+        ) : (
+          <img
+            id="seller-image"
+            src="https://raw.githubusercontent.com/ObelusFamily/Anythink-Market-w73uujgf/main/frontend/public/placeholder.png"
+            alt={item.seller.username}
+            className="user-pic mr-2"
+          />
+        )}
       </Link>
 
       <div className="flex-grow-1 d-flex flex-column py-2">
