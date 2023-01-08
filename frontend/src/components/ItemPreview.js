@@ -29,6 +29,8 @@ const ItemPreview = (props) => {
     }
   };
 
+  var fallbackImage = "/placeholder.png"
+
   return (
     <div
       className="card bg-dark border-light p-3"
