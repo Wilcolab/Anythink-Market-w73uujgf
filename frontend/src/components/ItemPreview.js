@@ -29,7 +29,7 @@ const ItemPreview = (props) => {
     }
   };
 
-  var fallbackImage = "/placeholder.png"
+  let fallbackImage = "/placeholder.png"
 
   return (
     <div
@@ -39,7 +39,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        src={item.image || fallbackImage}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
